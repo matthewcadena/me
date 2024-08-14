@@ -1,5 +1,7 @@
 import styles from './nav.module.css';
 import LinkObject from './Link';
+import { motion } from "framer-motion";
+import { menuSlide } from './anim';
 
 export default function Nav() {
   const navItems = [
@@ -10,7 +12,12 @@ export default function Nav() {
   ]
 
   return (
-    <div className={styles.menu}>
+    <motion.div variants={menuSlide}
+    animate="enter" 
+    exit="exit" 
+    initial="initial" 
+    className={styles.menu}
+    >
       <div className={styles.body}>
         <div className={styles.nav}>
           <div className={styles.header}>
@@ -19,12 +26,12 @@ export default function Nav() {
             {
               navItems.map((item, index) => {
                 return (
-                  <LinkObject data={{...item, index}}/>
+                  <LinkObject data={{...item, index}} key={index}/>
                 )
               })
             }
         </div>
       </div>
-    </div>
+    </motion.div>
   )
 }

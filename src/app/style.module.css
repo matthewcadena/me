@@ -10,7 +10,7 @@
 
 .sliderContainer {
   position: absolute;
-  top: calc(100vh - 300px);
+  top: calc(100vh - 30vh);
 }
 
 .slider {
