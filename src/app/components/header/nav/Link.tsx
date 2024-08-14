@@ -1,4 +1,4 @@
-import style from './style.module.css';
+import style from './nav.module.css';
 import Link from 'next/link'
 
 export default function LinkObject({ data }: { data: any }) {

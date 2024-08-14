@@ -4,8 +4,15 @@
 
 body {
   margin: 0px;
-  background-color: aliceblue;
+  background-color: black;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
   overflow-x: hidden;
+  }
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 @font-face {

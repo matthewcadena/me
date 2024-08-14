@@ -1,6 +1,6 @@
 .menu {
   height: 100vh;
-  background-color: #9194b2;
+  background-color: #565E49;
   position: fixed;
   right: 0;
   top: 0;
@@ -18,13 +18,13 @@
       .nav {
           display: flex;
           flex-direction: column;
-          font-size: 56px;
+          font-size: 40px;
           gap: 12px;
           margin-top: 80px;
 
           .header {
-              color: #565e49;
-              border-bottom: 1px solid #565e49;
+              color: #dce1e5;
+              border-bottom: 1px solid #dce1e5;
               text-transform: uppercase;
               font-size: 11px;
               margin-bottom: 40px;
@@ -38,4 +38,19 @@
           
       }
   }
+}
+
+.link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    .indicator {
+        width: 10px;
+        height: 10px;
+        background-color: white;
+        border-radius: 50%;
+        position: absolute;
+        left: -30px;
+    }
 }

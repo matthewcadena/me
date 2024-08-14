@@ -1,4 +1,4 @@
-import styles from './style.module.css';
+import styles from './nav.module.css';
 import LinkObject from './Link';
 
 export default function Nav() {
@@ -15,6 +15,7 @@ export default function Nav() {
         <div className={styles.nav}>
           <div className={styles.header}>
             <p>Navigation</p>
+          </div>
             {
               navItems.map((item, index) => {
                 return (
@@ -22,7 +23,6 @@ export default function Nav() {
                 )
               })
             }
-          </div>
         </div>
       </div>
     </div>
