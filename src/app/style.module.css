@@ -1,0 +1,87 @@
+.main {
+  margin-bottom: 100vh;
+  height: 100vh;
+  position: relative;
+}
+
+.main img {
+  object-fit: cover;
+}
+
+.sliderContainer {
+  position: absolute;
+  top: calc(100vh - 300px);
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.slider p {
+  font-family: 'axel-grotesk';
+  margin: 0px;
+  color: white;
+  font-size: 240px;
+  font-size: 500;
+}
+
+.slider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+}
+
+.header{
+  padding: 30px;
+    position: fixed;
+    right: 0;
+    z-index: 1;
+
+    .button{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-color: #cbbbc7;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+  .burger{
+      width: 100%;
+      &::after, &::before{
+          content: "";
+          display: block;
+          height: 1px;
+          width: 40%;
+          margin: auto;
+          background-color: white;
+          position: relative;
+          transition: transform 0.3s;
+      }
+
+      &::after{
+          top: -5px;
+      }
+
+      &::before{
+          top: 5px;
+      }
+  }
+
+  .burgerActive{
+
+      &::after{
+          transform: rotate(45deg);
+          top: -1px;
+      }
+
+      &::before{
+          transform: rotate(-45deg);
+          top: 0px;
+      }
+      
+  }
+}
