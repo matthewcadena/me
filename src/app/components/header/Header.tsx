@@ -1,5 +1,5 @@
 'use client';
-import styles from '../../style.module.css';
+import styles from './style.module.css';
 import { useState } from 'react';
 
 export default function Header() {
