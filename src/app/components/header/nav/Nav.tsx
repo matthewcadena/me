@@ -1,5 +1,6 @@
 import styles from './nav.module.css';
 import LinkObject from './Link';
+import Footer from './Footer';
 import { motion } from "framer-motion";
 import { menuSlide } from './anim';
 
@@ -31,6 +32,7 @@ export default function Nav() {
               })
             }
         </div>
+        <Footer />
       </div>
     </motion.div>
   )
