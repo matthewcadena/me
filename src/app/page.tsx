@@ -1,8 +1,29 @@
+'use client';
 import React from 'react';
 import styles from './page.module.css';
 import Image from 'next/image';
+import gsap from 'gsap';
+import { useEffect, useRef } from 'react';
 
 export default function Home() {
+  
+  const firstText = useRef(null);
+  const secondText = useRef(null);
+  let xPercent = 0;
+  let direction = -1;
+
+  useEffect(() => {
+    requestAnimationFrame(animation);    
+  }, []);
+
+  const animation = () => {
+    gsap.set(firstText.current, {xPercent: xPercent});
+    gsap.set(secondText.current, {xPercent: xPercent});
+    xPercent += 0.1 * direction;
+    requestAnimationFrame(animation);
+  }
+
+
   return (
     <main className={styles.main}>
       <Image
@@ -13,8 +34,8 @@ export default function Home() {
 
       <div className={styles.sliderContainer}>
         <div className={styles.slider}>
-          <p>Matt Cadena —</p>
-          <p>Matt Cadena —</p>
+          <p ref={firstText}>Matt Cadena —</p>
+          <p ref={secondText}>Matt Cadena —</p>
         </div>
       </div>
     </main>
