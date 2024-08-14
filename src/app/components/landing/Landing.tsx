@@ -38,7 +38,7 @@ export default function Landing() {
     }
     gsap.set(firstText.current, {xPercent: xPercent});
     gsap.set(secondText.current, {xPercent: xPercent});
-    xPercent += 0.1 * direction;
+    xPercent += 0.04 * direction;
     requestAnimationFrame(animation);
   }
 
@@ -53,8 +53,8 @@ export default function Landing() {
 
       <div className={styles.sliderContainer}>
         <div className={styles.slider} ref={slider}>
-          <p ref={firstText}>Matt Cadena —</p>
-          <p ref={secondText}>Matt Cadena —</p>
+          <p ref={firstText}>Matt Cadena — Matt Cadena —&nbsp; </p>
+          <p ref={secondText}>Matt Cadena — Matt Cadena —&nbsp;</p>
         </div>
       </div>
     </main>

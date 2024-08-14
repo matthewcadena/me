@@ -1,5 +1,5 @@
-import styles from '../../style.module.css';
-import Link from './Link';
+import styles from './style.module.css';
+import LinkObject from './Link';
 
 export default function Nav() {
   const navItems = [
@@ -18,7 +18,7 @@ export default function Nav() {
             {
               navItems.map((item, index) => {
                 return (
-                  <Link data={{...item, index}}/>
+                  <LinkObject data={{...item, index}}/>
                 )
               })
             }
