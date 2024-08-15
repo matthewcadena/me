@@ -38,7 +38,7 @@ export default function About() {
     "I play on the men's varsity soccer team,",
     "and I'm passionate about software.",
     "I believe in writing clean code",
-    "that can make a difference."
+    "that makes a difference."
   ];
 
   return (

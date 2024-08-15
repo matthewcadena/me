@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './landing.module.css';
 import Image from 'next/image';
 import gsap from 'gsap';
+import  LandingNav from './LandingNav';
 import { useLayoutEffect, useRef } from 'react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
@@ -63,6 +64,7 @@ export default function Landing() {
 
   return (
     <main className={styles.main}>
+      <LandingNav />
       <Image
         fill={true}
         src="/images/matt-cmu-crop.jpg"
