@@ -40,10 +40,6 @@ export default function Landing() {
         start: "top",
         end: "+=100px",
         scrub: 1,
-        markers: true,
-        onUpdate: (self) =>  console.log(
-          'progress:',
-          self.progress.toFixed(3)),
       },
     });
     
