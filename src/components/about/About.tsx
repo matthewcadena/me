@@ -42,17 +42,17 @@ function AnimatedText({ children }: Props) {
 
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from(text.current, {
-      scrollTrigger: {
-        trigger: text.current,
-        scrub: 1,
-        start: "top bottom",
-        end: "bottom bottom",
-      },
-      opacity: 0,
-      left: "-200px",
-      ease: "power3.Out",
-    });
+    // gsap.from(text.current, {
+    //   scrollTrigger: {
+    //     trigger: text.current,
+    //     scrub: 1,
+    //     start: "top bottom",
+    //     end: "bottom bottom",
+    //   },
+    //   opacity: 0,
+    //   left: "-200px",
+    //   ease: "power3.Out",
+    // });
   }, []);
 
   return <p ref={text}>{children}</p>;
