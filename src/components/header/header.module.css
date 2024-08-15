@@ -2,7 +2,7 @@
     padding: 30px;
     right: 0;
     z-index: 3;
-    position: absolute;
+    position: fixed;
 
     .buttonContainer {
         width: 80px;

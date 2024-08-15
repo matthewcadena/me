@@ -21,17 +21,17 @@ export default function Nav() {
     >
       <div className={styles.body}>
         <div className={styles.nav}>
-          <div className={styles.header}>
-            <p>Navigation</p>
+            <div className={styles.header}>
+              <p>Navigation</p>
+            </div>
+              {
+                navItems.map((item, index) => {
+                  return (
+                    <LinkObject data={{...item, index}} key={index}/>
+                  )
+                })
+              }
           </div>
-            {
-              navItems.map((item, index) => {
-                return (
-                  <LinkObject data={{...item, index}} key={index}/>
-                )
-              })
-            }
-        </div>
         <Footer />
       </div>
     </motion.div>
