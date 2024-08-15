@@ -13,9 +13,8 @@ const AnimatedText = ({children}: {children: React.ReactNode}) => {
       scrollTrigger: {
         trigger: text.current,
         start: "0px bottom",
-        end: "+=400px",
+        end: "+=300px",
         scrub: 1,
-        markers: true,
       },
     });
 
