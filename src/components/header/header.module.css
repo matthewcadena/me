@@ -1,18 +1,26 @@
 .header {
     padding: 30px;
-    position: fixed;
     right: 0;
     z-index: 3;
+    position: absolute;
 
-    .button {
+    .buttonContainer {
         width: 80px;
         height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button {
+        width: 100%;
+        height: 100%;
         border-radius: 50%;
         background-color: #cbbbc7;
         cursor: pointer;
         display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
     }
 
     .burger {

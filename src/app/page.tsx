@@ -17,8 +17,9 @@ export default function Home() {
   
   return (
     <>
-      <Header />
+      
       <Landing />
+      <Header />
       <About />
     </>
   )
