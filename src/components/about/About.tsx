@@ -65,6 +65,10 @@ export default function About() {
         return <AnimatedFromLeft key={index}>{phrase}</AnimatedFromLeft>;
       })}
       <div className={styles.progressBar} id="progress"></div>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
   );
 }

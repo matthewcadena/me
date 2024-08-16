@@ -3,20 +3,22 @@ import { AnimatePresence } from 'framer-motion';
 import styles from './header.module.css';
 import Nav from './nav/Nav';
 import { useState,} from 'react';
+import { useAtom } from "jotai";
+import { navActiveAtom } from "../../state/atoms";
 
 export default function Header() {
-  const [isActive, setIsActive] = useState(false);   
+  const [navActive, setNavActive] = useAtom(navActiveAtom);   
 
   return (
     <>    
       <div className={styles.header}>
         <div className={styles.buttonContainer}>
-        <div onClick={() => {setIsActive(!isActive)}} className={styles.button}>
-          <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
+        <div onClick={() => {setNavActive(!navActive)}} className={styles.button}>
+          <div className={`${styles.burger} ${navActive ? styles.burgerActive : ""}`}></div>
         </div>
         </div>
           <AnimatePresence mode="wait">
-            { isActive && <Nav />}
+            { navActive && <Nav />}
           </AnimatePresence>
       </div>
     </>
