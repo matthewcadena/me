@@ -1,17 +1,13 @@
-/* .aboutContainer {
-  position: relative;
-  background-color: black;
-} */
-
-.about{
+.about {
   position: relative;
   color: white;
   font-size: 3vw;
   text-transform: uppercase;
   margin-top: 0px;
   margin-left: 10vw;
+  margin-bottom: 100vw;
 }
-.about p{
+.about p {
   margin: 0px;
   position: relative;
 }

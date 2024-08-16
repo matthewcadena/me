@@ -40,7 +40,6 @@ export default function About() {
         end: "+=500px",
         scrub: 1,
         pin: true,
-        markers: true,
       },
     });
 
@@ -65,10 +64,6 @@ export default function About() {
         return <AnimatedFromLeft key={index}>{phrase}</AnimatedFromLeft>;
       })}
       <div className={styles.progressBar} id="progress"></div>
-      <br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
   );
 }

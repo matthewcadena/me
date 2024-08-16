@@ -1,11 +1,11 @@
-'use client';
-import React from 'react';
-import styles from './landing.module.css';
-import Image from 'next/image';
-import gsap from 'gsap';
-import { useLayoutEffect, useRef } from 'react';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useGSAP } from '@gsap/react';
+"use client";
+import React from "react";
+import styles from "./landing.module.css";
+import Image from "next/image";
+import gsap from "gsap";
+import { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(useGSAP);
 
@@ -24,12 +24,12 @@ export default function Landing() {
     } else if (xPercent >= 0) {
       xPercent = -100;
     }
-    gsap.set(firstText.current, {xPercent: xPercent});
-    gsap.set(secondText.current, {xPercent: xPercent});
+    gsap.set(firstText.current, { xPercent: xPercent });
+    gsap.set(secondText.current, { xPercent: xPercent });
     xPercent += 0.04 * direction;
     requestAnimationFrame(animation);
-  }
-  
+  };
+
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     requestAnimationFrame(animation);
@@ -42,22 +42,23 @@ export default function Landing() {
         scrub: 1,
       },
     });
-    
+
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
         start: 0,
         end: window.innerHeight,
         scrub: 1.5,
-        onUpdate: e => direction = e.direction * -1,
+        onUpdate: (e) => (direction = e.direction * -1),
       },
       x: "-=300px",
     });
 
     timeline.fromTo(
       backgroundImage.current,
-      { clipPath: "inset(1%)", },
-      { clipPath: "inset(0%)", duration: 1 }, 0
+      { clipPath: "inset(1%)" },
+      { clipPath: "inset(0%)", duration: 1 },
+      0
     );
   }, []);
 
