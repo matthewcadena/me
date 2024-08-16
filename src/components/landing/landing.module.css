@@ -1,0 +1,47 @@
+.main {
+  height: 100vh;
+  position: relative;
+}
+
+.main img {
+  object-fit: cover;
+}
+
+.sliderContainer {
+  position: absolute;
+  top: calc(100vh - 30vh);
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+  display: flex;
+}
+
+.slider p {
+  font-family: "axel-grotesk";
+  margin: 0px;
+  color: white;
+  font-size: 240px;
+  font-size: 500;
+}
+
+.slider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+}
+
+.header {
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  z-index: 2;
+  color: white;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+}
+
+.header p {
+  margin-right: 35px;
+}

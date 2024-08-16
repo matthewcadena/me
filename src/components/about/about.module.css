@@ -1,0 +1,20 @@
+.about {
+  position: relative;
+  color: white;
+  font-size: 3vw;
+  text-transform: uppercase;
+  margin-top: 0px;
+  margin-left: 10vw;
+  margin-bottom: 100vw;
+}
+.about p {
+  margin: 0px;
+  position: relative;
+}
+
+.progressBar {
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  margin-top: 2vh;
+}
