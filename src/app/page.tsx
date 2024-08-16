@@ -19,7 +19,8 @@ export default function Home() {
     <>
       <Header />
       <Landing />
-      <About />
+      <div id="about"><About /></div>
+      
     </>
   )
   

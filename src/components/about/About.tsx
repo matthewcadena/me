@@ -1,15 +1,16 @@
-import React, { useLayoutEffect, useRef } from 'react'
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import gsap from 'gsap';
-import styles from './about.module.css';
+import React, { useLayoutEffect, useRef } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import styles from "./about.module.css";
 
-const AnimatedText = ({children}: {children: React.ReactNode}) => {
+const AnimatedFromLeft = ({ children }: { children: React.ReactNode }) => {
   const text = useRef(null);
-  
-  useLayoutEffect( () => {
+
+  useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const timeline = gsap.timeline({
+    const textTl = gsap.timeline({
       scrollTrigger: {
         trigger: text.current,
         start: "0px bottom",
@@ -18,19 +19,35 @@ const AnimatedText = ({children}: {children: React.ReactNode}) => {
       },
     });
 
-    timeline.fromTo(
+    textTl.fromTo(
       text.current,
       { opacity: 0, left: "-200px" },
       { opacity: 1, left: "0", ease: "power3.Out" }
     );
-    
-   }, []);
-
-
-    return <p ref={text}>{children}</p>
-}
+  }, []);
+  return <p ref={text}>{children}</p>;
+};
 
 export default function About() {
+  const about = useRef(null);
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    const aboutTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: about.current,
+        start: "top top",
+        end: "+=500px",
+        scrub: 1,
+        pin: true,
+        markers: true,
+      },
+    });
+
+    aboutTl.fromTo("#progress", { width: " 0%" }, { width: "76%" });
+
+    aboutTl.fromTo;
+  });
 
   const phrases = [
     "I'm a junior at Carnegie Mellon,",
@@ -38,20 +55,16 @@ export default function About() {
     "I play on the men's varsity soccer team,",
     "and I'm passionate about software.",
     "I believe in writing clean code",
-    "that makes a difference."
+    "that makes a difference.",
   ];
 
   return (
-    <div className={styles.about}>
+    <div className={styles.about} ref={about} id="#about">
       <h1>About Me</h1>
       {phrases.map((phrase, index) => {
-         return <AnimatedText key={index}>{phrase}</AnimatedText>;
-        
+        return <AnimatedFromLeft key={index}>{phrase}</AnimatedFromLeft>;
       })}
-      <br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/>
-      <br/><br/><br/><br/><br/><br/><br/>
+      <div className={styles.progressBar} id="progress"></div>
     </div>
-  )
+  );
 }
