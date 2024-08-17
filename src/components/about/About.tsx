@@ -43,7 +43,7 @@ export default function About() {
       },
     });
 
-    aboutTl.fromTo("#progress", { width: " 0%" }, { width: "76%" });
+    aboutTl.fromTo("#progress", { width: " 0%" }, { width: "70%" });
 
     aboutTl.fromTo;
   });
