@@ -2,6 +2,7 @@
 import { useRef, useLayoutEffect } from "react";
 import styles from "./work.module.css";
 import Image from "next/image";
+import Experience from "./experience/Experience";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -31,7 +32,6 @@ export default function Work() {
         end: "+=500px",
         scrub: 1,
         pin: true,
-        markers: true,
       },
     });
 
@@ -79,6 +79,7 @@ export default function Work() {
         </div>
       </div>
       <div className={styles.progressBar} ref={progressBarRef}></div>
+      <Experience />
     </div>
   );
 }
