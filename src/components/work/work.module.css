@@ -3,11 +3,12 @@
   /* width: 100%; */
   /* display: flex; */
   justify-content: center;
+  margin-bottom: 150vh;
 }
 
 .backgroundImage {
   width: 100%;
-  height: 128vh;
+  height: 100vh;
   position: absolute;
   filter: brightness(50%);
 }
@@ -18,7 +19,7 @@
 
 .workIntroContainer {
   margin-top: 1vh;
-  height: 128vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -37,12 +38,21 @@
   object-position: top;
 }
 
-.workIntroContainer h1 {
+.workIntroContainer h1, .workIntroTitleContainer {
   color: white;
   font-size: 7vw;
   z-index: 1;
   text-align: center;
   white-space: nowrap;
   text-transform: uppercase;
+}
+
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  background-color: white;
+  border-radius: 5px;
 }
 

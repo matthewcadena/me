@@ -10,7 +10,7 @@ const AnimatedFromLeft = ({ children }: { children: React.ReactNode }) => {
   useLayoutEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const textTl = gsap.timeline({
+    const textTimeline = gsap.timeline({
       scrollTrigger: {
         trigger: text.current,
         start: "0px bottom",
@@ -19,7 +19,7 @@ const AnimatedFromLeft = ({ children }: { children: React.ReactNode }) => {
       },
     });
 
-    textTl.fromTo(
+    textTimeline.fromTo(
       text.current,
       { opacity: 0, left: "-200px" },
       { opacity: 1, left: "0", ease: "power3.Out" }
