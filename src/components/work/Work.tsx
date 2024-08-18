@@ -1,3 +1,4 @@
+"use client";
 import styles from "./work.module.css";
 import Image from "next/image";
 import gsap from "gsap";
@@ -16,21 +17,13 @@ export default function Work() {
       },
     });
 
-    workTl
-      .from("#introImage", { height: "200px" })
-      // .fromTo(
-      //   "#backgroundImage",
-      //   { clipPath: `inset(1%)` },
-      //   { clipPath: `inset(0%)`, duration: 1 },
-      //   0
-      // );
+    workTl.from("#introImage", { height: "250px" });
   });
 
   return (
     <div className={styles.work} id="work">
       <div className={styles.backgroundImage}>
         <Image
-          id="#backgroundImage"
           src={"/images/interns.jpg"}
           fill={true}
           alt="work-background-image"
@@ -42,7 +35,7 @@ export default function Work() {
           className={styles.workIntroImage}
           id="introImage"
           data-scroll
-          data-scroll-speed="7"
+          data-scroll-speed="0.3"
         >
           <Image
             src={"/images/marquee-stroll.jpg"}

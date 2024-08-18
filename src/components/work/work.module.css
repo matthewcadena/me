@@ -9,7 +9,7 @@
   width: 100%;
   height: 128vh;
   position: absolute;
-  filter: brightness(60%);
+  filter: brightness(50%);
 }
 
 .backgroundImage img {
@@ -26,7 +26,7 @@
 }
 
 .workIntroImage{
-  filter: brightness(70%);
+  filter: brightness(60%);
   width: 350px;
   height: 550px;
   position: absolute;
