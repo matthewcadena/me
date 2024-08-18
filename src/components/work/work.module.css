@@ -1,16 +1,48 @@
+.work{
+  position: relative;
+  /* width: 100%; */
+  /* display: flex; */
+  justify-content: center;
+}
+
 .backgroundImage {
   width: 100%;
-  height: 130vh;
-  position: relative;
-  overflow: hidden;
+  height: 128vh;
+  position: absolute;
+  filter: brightness(60%);
 }
 
 .backgroundImage img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: auto;
   object-fit: cover;
-  filter: brightness(60%);
 }
+
+.workIntroContainer {
+  margin-top: 1vh;
+  height: 128vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.workIntroImage{
+  filter: brightness(70%);
+  width: 350px;
+  height: 550px;
+  position: absolute;
+}
+
+.workIntroImage img {
+  object-fit: cover;
+  object-position: top;
+}
+
+.workIntroContainer h1 {
+  color: white;
+  font-size: 7vw;
+  z-index: 1;
+  text-align: center;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
