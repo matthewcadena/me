@@ -1,20 +1,40 @@
 .experience {
-  position: absolute;
+  position: relative;
   color: #ffffff;
   font-size: 24px;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.experiencePanel1 {
+  position: relative;
+  color: #ffffff;
+  font-size: 24px;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #aa64a7, #663e64);
+}
+
+.introPanel {
+  position: relative;
+  color: #ffffff;
+  font-size: 24px;
+  width: 100vw;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   background: linear-gradient(135deg, #a0b28b, #565e49);
-}
-
-.introPanel {
-  max-width: 800px;
-  text-align: center;
-  background-color: transparent;
 }
 
 .introPanel p {
