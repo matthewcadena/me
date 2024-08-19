@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0px;
   background-color: black;
   width: 100%;
@@ -7,7 +7,14 @@ body {
   overflow-y: scroll;
   padding-right: 17px;
   box-sizing: content-box;
-  }
+  } */
+
+body {
+  overscroll-behavior: none;
+  height: 100vh;
+  margin: 0px;
+  background-color: black;
+}
 
 body::-webkit-scrollbar {
   display: none;
