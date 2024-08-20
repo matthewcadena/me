@@ -1,42 +1,122 @@
-.experience {
-  /* position: relative;
-  color: #ffffff;
-  font-size: 24px;
-  width: 600%;
-  min-height: 100vh; */
-  overscroll-behavior: none;
-  width: 600%;
-  height: 100%;
-  display: flex;
-  flex-wrap: nowrap;
+.projectsSection {
+	margin-block-start: var(--section-mt);
+	padding: 4rem 10rem;
+  background-color: black;
+  color: white;
 }
 
-.experiencePanel1, .experiencePanel2 {
+.projects {
+	padding-block-start: 5rem;
+	display: flex;
+	flex-direction: column;
+	gap: 6rem;
+}
+
+.project {
+	display: grid;
+	place-items: center;
+	gap: 5rem;
+}
+
+.project1 {
+  grid-template-columns: 38% 62%;
+}
+
+.project2 {
+  grid-template-columns: 62% 38%;
+}
+
+.projectImg {
+	transition: opactiy 300ms ease-in-out;
+	position: relative;
+	display: inline-block;
+	height: 100%;
+}
+
+.projectImg:hover {
+	opacity: 0.9;
+}
+
+.project:nth-child(even) a {
+	order: 2;
+}
+.project:nth-child(even) div {
+	order: 1;
+}
+
+.title {
+	font-size: clamp(3.2rem, 3vw, 6rem);
+  font-family: "axel-grotesk";
+}
+
+.positionTitle {
+  font-family: "axel-grotesk";
+}
+
+.subtitle {
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: clamp(1.2rem, 1vw, 1.35rem);
+	color: #cbbbc7;
+}
+
+
+.project h3 {
+	font-size: clamp(2rem, 3vw, 4rem);
+	font-weight: 500;
+	letter-spacing: 5px;
+	color: #9c9394;
+}
+
+.project h2 {
+	padding-block-start: clamp(1.5rem, 2vw, 3rem);
+	font-size: clamp(2.5rem, 3vw, 4rem);
+}
+
+.project p {
+	padding-block-start: 1.5rem;
+	max-width: 500px;
+}
+
+.sideImg {
   position: relative;
-  color: #ffffff;
-  font-size: 24px;
-  width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #aa64a7, #663e64);
+  width: 100%;
+  max-height: 800px;
+  height: auto;
+  object-fit: contain;
 }
 
-.introPanel {
-  position: relative;
-  color: #ffffff;
-  font-size: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #a0b28b, #565e49);
+
+.techStack,
+.projectLinks {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 2rem;
+	padding-block-start: 2rem;
 }
 
-.introPanel p {
-  margin: 0;
-  line-height: 1.6;
-  color: #ffffff;
+.projectLinks {
+	column-gap: 5rem;
+	padding-block-start: 3.2rem;
+}
+
+.techStack li {
+	padding: 0.2rem 0.5rem;
+	background: var(--tag-clr);
+	border-radius: 2px;
+	color: var(--primary-clr);
+	font-size: clamp(1.15rem, 1vw, 1.3rem);
+}
+
+.projectLinks a {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	position: relative;
+	transition: var(--transition-clr);
+}
+
+.project-links a:hover {
+	color: var(--accent-clr);
 }

@@ -1,19 +1,10 @@
-/* body {
-  margin: 0px;
-  background-color: black;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  overflow-y: scroll;
-  padding-right: 17px;
-  box-sizing: content-box;
-  } */
-
 body {
   overscroll-behavior: none;
   height: 100vh;
   margin: 0px;
   background-color: black;
+  font-family: 'PT Sans', sans-serif;
+  line-height: 1.4;
 }
 
 body::-webkit-scrollbar {
