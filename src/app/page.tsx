@@ -4,7 +4,7 @@ import Landing from '../components/landing/Landing';
 import Header from '../components/header/Header';
 import About from '../components/about/About';
 import Work from '../components/work/Work';
-import Projects from '../components/projects//Projects';
+import Projects from '../components/projects/Projects';
 
 export default function Home() {
   

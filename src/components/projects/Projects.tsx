@@ -5,6 +5,7 @@ import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectCards from "./ProjectCards";
 
 export default function Projects() {
   gsap.registerPlugin(ScrollTrigger);
@@ -78,6 +79,7 @@ export default function Projects() {
         </div>
       </div>
       <div className={styles.progressBar} ref={progressBarRef}></div>
+      <ProjectCards />
     </div>
   );
 }
