@@ -4,6 +4,7 @@ import Landing from '../components/landing/Landing';
 import Header from '../components/header/Header';
 import About from '../components/about/About';
 import Work from '../components/work/Work';
+import Projects from '../components/projects//Projects';
 
 export default function Home() {
   
@@ -13,6 +14,7 @@ export default function Home() {
       <Landing />
       <div id="about"><About /></div>
       <div id="work"><Work /></div>
+      <div id="my-projects"><Projects /></div>
     </div>
   )
   

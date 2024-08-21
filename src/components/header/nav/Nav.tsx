@@ -9,7 +9,7 @@ export default function Nav() {
     { title: "Home", href: "/" },
     { title: "About", href: "#about" },
     { title: "Work", href: "#work" },
-    { title: "Projects", href: "/Projects" },
+    { title: "Projects", href: "#my-projects" },
   ];
 
   return (
