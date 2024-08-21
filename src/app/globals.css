@@ -5,6 +5,7 @@ body {
   background-color: black;
   font-family: 'PT Sans', sans-serif;
   line-height: 1.4;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -17,5 +18,6 @@ body::-webkit-scrollbar {
  }
 
  h1 {
+  font-family: 'axel-grotesk';
   margin: 0px;
  }

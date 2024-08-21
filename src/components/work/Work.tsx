@@ -1,5 +1,5 @@
 "use client";
-import { useRef, useLayoutEffect } from "react";
+import { useRef } from "react";
 import styles from "./work.module.css";
 import Image from "next/image";
 import Experience from "./experience/Experience";
