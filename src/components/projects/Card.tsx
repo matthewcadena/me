@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import styles from "./projects.module.css";
 import Image from "next/image";
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 export default function Card({
   i,
@@ -27,12 +29,24 @@ export default function Card({
   let container = useRef(null);
   let cardImage = useRef(null);
 
-  const { scrollYProgress } = useScroll({
-    target: container,
-    offset: ["start end", "start start"],
-  });
-
   const scale = useTransform(progress, range, [1, targetScale]);
+
+  useGSAP(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: container.current,
+        start: "bottom bottom",
+        end: "+=800px",
+        scrub: 1,
+      },
+    });
+
+    timeline.fromTo(
+      cardImage.current,
+      { transform: "scale(1.1, 1.1)" },
+      { transform: "scale(1, 1)" }  
+    );
+  });
 
   return (
     <div className={styles.cardContainer} ref={container}>

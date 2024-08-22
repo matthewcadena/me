@@ -18,7 +18,6 @@ export default function ProjectCards() {
   })
   
 
-
   return (<div className={styles.projectsContentMain} ref={container}>
        {
         projects.map( (project, index) => {
