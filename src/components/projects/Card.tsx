@@ -31,7 +31,6 @@ export default function Card({
         start: "bottom bottom",
         end: "+=800px",
         scrub: 1,
-        markers: true,
       },
     });
 
