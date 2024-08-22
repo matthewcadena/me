@@ -12,7 +12,7 @@ export default function ProjectCards() {
   return (<div className={styles.projectsContentMain}>
        {
         projects.map( (project, index) => {
-          return <Card key={index} {...project}/>
+          return <Card key={index} i={index} {...project}/>
         })
       }
       <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
