@@ -1,49 +1,49 @@
 import React, { useRef } from "react";
 import styles from "./projects.module.css";
 import Image from "next/image";
-import { motion, useScroll } from "framer-motion";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 
 export default function Card({
+  i,
   title,
   description,
   src,
   link,
   color,
-  i,
+  progress,
+  range,
+  targetScale,
 }: {
+  i: number;
   title: string;
   description: string;
   src: string;
   link: string;
   color: string;
-  i: number;
+  progress: MotionValue<number>;
+  range: number[];
+  targetScale: number;
 }) {
   let container = useRef(null);
   let cardImage = useRef(null);
 
-  useGSAP(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: container.current,
-        start: "bottom bottom",
-        end: "+=800px",
-        scrub: 1,
-      },
-    });
-
-    timeline.fromTo(
-      cardImage.current,
-      { transform: "scale(1.1, 1.1)" },
-      { transform: "scale(1, 1)" }  
-    );
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start end", "start start"],
   });
+
+  const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div className={styles.cardContainer} ref={container}>
-      <div className={styles.card} style={{ backgroundColor: color, top: `calc( -30% + ${i * 25}px)`}}>
+      <motion.div
+        style={{
+          backgroundColor: color,
+          scale,
+          top: `calc(-5vh + ${i * 25}px)`,
+        }}
+        className={styles.card}
+      >
         <h2>{title}</h2>
         <div className={styles.body}>
           <div className={styles.description}>
@@ -73,7 +73,7 @@ export default function Card({
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }
