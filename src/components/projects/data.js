@@ -6,7 +6,7 @@ export const projects = [
     src: "agent-portal.png",
     link: "https://artisan.ford.com/team-shelby",
     linkText: "Read more about Team Shelby",
-    color: "#796b74",
+    color: "#a88f9b",
   },
   {
     title: "Jargon Garden",
@@ -15,7 +15,7 @@ export const projects = [
     src: "jargon-garden.jpg",
     link: "https://artisan.ford.com/team-shelby",
     linkText: "Read more about Team Shelby",
-    color: "#8d7f89",
+    color: "#b89fa9",
   },
   {
     title: "Gotham City Tracker",
@@ -24,7 +24,7 @@ export const projects = [
     src: "gcpd-animation.gif",
     link: "https://github.com/67-272-Students-Spring-2024/gcpd-phase-4-matthewcadena",
     linkText: "Source code",
-    color: "#a2939d",
+    color: "#c8b1b8",
   },
   {
     title: "NBA Tic Tac Toe",
@@ -33,7 +33,7 @@ export const projects = [
     src: "nba-tac-toe.gif",
     link: "https://www.youtube.com/watch?v=v2mr_DU-5Fo",
     linkText: "Video demo",
-    color: "#b6a7b2",
+    color: "#d6c3c7",
   },
   {
     title: "Personal Website",
