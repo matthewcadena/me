@@ -13,7 +13,7 @@
 
 .link {
   color: white;
-  font-family: 'PT Sans', sans-serif;
+  font-family: "PT Sans", sans-serif;
   text-decoration: none;
   font-weight: 300;
   font-size: 2vh;
@@ -22,4 +22,22 @@
 
 .link:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  @media (max-width: 768px) {
+    .container {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      width: 60%;
+      color: white;
+      justify-content: space-between;
+      align-items:start;
+      padding: 2rem 0;
+      z-index: 1;
+      margin-left: 2rem;
+      margin-top: 0rem;
+    }
+  }
 }

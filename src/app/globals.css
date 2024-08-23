@@ -21,3 +21,12 @@ body::-webkit-scrollbar {
   font-family: 'axel-grotesk';
   margin: 0px;
  }
+
+ @media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative
+  }
+}
