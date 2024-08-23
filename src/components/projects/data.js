@@ -20,7 +20,7 @@ export const projects = [
   {
     title: "Gotham City Tracker",
     description:
-      "As the main project in my 67-272: Application Design and Development, I developed 'Gotham City Department Tracker,' a full-stack CRUD application using Ruby on Rails, React, and MySQL. I led the entire design and development process, starting with crafting user stories crafted from a list of functional requirements. Following an incremental, agile approach, I built a custom API, implemented secure authentication, and designed a dynamic UI. The project leveraged MVC architecture for code organization, with MySQL handling database management.",
+      "As the main project in my 67-272: Application Design and Development, I developed 'Gotham City Department Tracker,' a full-stack CRUD application using Ruby on Rails, React, and MySQL. I led the entire design and development process, starting with creating user stories from a list of functional requirements. Following an incremental, agile approach, I built a custom API, implemented secure authentication, and designed a dynamic UI. The project leveraged MVC architecture for code organization, with MySQL handling database management.",
     src: "gcpd-animation.gif",
     link: "https://github.com/67-272-Students-Spring-2024/gcpd-phase-4-matthewcadena",
     linkText: "Source code",
@@ -38,7 +38,7 @@ export const projects = [
   {
     title: "Personal Website",
     description:
-      "For this website, I leveraged my experience with React, TypeScript, and Jotai from my internship to craft a dynamic Next.js web app. Integrating Framer Motion and GSAP, I created a captivating display that highlights my exploration of new frontend and design techniques. The result is a visually engaging and technically sophisticated site that reflects my growth and creativity in web development.",
+      "For this website, I leveraged my experience with React, TypeScript, and Jotai from my internship to craft a dynamic Next.js web app. Using Framer Motion and GSAP, I created a captivating display that highlights my exploration of new frontend and design techniques. The result is a visually engaging and technically sophisticated site that reflects my growth and creativity in web development.",
     src: "website-landing.png",
     link: "https://github.com/matthewcadena/me",
     linkText: "Source code",

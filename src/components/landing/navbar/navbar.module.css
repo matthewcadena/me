@@ -1,0 +1,25 @@
+.container {
+  position: absolute;
+  display: flex;
+  width: 20%;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  z-index: 1;
+  margin-left: 5rem;
+  margin-top: 2rem;
+}
+
+.link {
+  color: white;
+  font-family: 'PT Sans', sans-serif;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 2vh;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
+}
