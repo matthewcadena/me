@@ -5,6 +5,7 @@ import Header from "../components/header/Header";
 import About from "../components/about/About";
 import Work from "../components/work/Work";
 import Projects from "../components/projects/Projects";
+import Footer from "../components/footer/Footer";
 import Lenis from "lenis";
 
 export default function Home() {
@@ -32,6 +33,7 @@ export default function Home() {
       <div id="my-projects">
         <Projects />
       </div>
+      <Footer />
     </div>
   );
 }
