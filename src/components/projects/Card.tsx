@@ -11,6 +11,7 @@ export default function Card({
   description,
   src,
   link,
+  linkText,
   color,
   progress,
   range,
@@ -21,6 +22,7 @@ export default function Card({
   description: string;
   src: string;
   link: string;
+  linkText: string;
   color: string;
   progress: MotionValue<number>;
   range: number[];
@@ -64,7 +66,7 @@ export default function Card({
             <p>{description}</p>
             <span>
               <a href={link} target="_blank">
-                See more
+                {linkText}
               </a>
               <svg
                 width="22"
