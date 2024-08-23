@@ -36,4 +36,4 @@ jobs:
           AWS_DEFAULT_REGION: ${{ secrets.AWS_DEFAULT_REGION }}
           AWS_BUCKET_NAME: mattcadena.com
           BUCKET_PATH: /
-          DIST_LOCATION_CODE: .next
+          DIST_LOCATION_CODE: .dist
