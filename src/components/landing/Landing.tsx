@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+import Navbar from "./navbar/Navbar";
 
 gsap.registerPlugin(useGSAP);
 
@@ -64,6 +65,7 @@ export default function Landing() {
 
   return (
     <main className={styles.main}>
+      <Navbar />
       <Image
         fill={true}
         src="/images/matt-cmu-crop.jpg"
