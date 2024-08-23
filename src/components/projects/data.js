@@ -3,8 +3,8 @@ export const projects = [
     title: "CX Agent Portal",
     description: "During my 2024 summer internship at Ford, I redesigned the agent portal for the company's customer service agents. The project involved creating an independent application with a user-friendly UI, incorporating feedback from agents to ensure an optimal experience. The solution was developed to operate without dependency on the existing content management system, which had a pending decommission date, ensuring long-term viability for Ford's customer service operations. Additionally, the application was hosted on Google Cloud Platform (GCP), and we implemented a CI/CD pipeline using Tekton to streamline development and deployment processes.",
     src: "agent-portal.png",
-    link: "https://www.ignant.com/2023/03/25/ad2186-matthias-leidingers-photographic-exploration-of-awe-and-wonder/",
-    linkText: "Demo video",
+    link: "https://artisan.ford.com/team-shelby",
+    linkText: "Read more about Team Shelby",
     color: "#796b74"
   },
   {
@@ -25,18 +25,18 @@ export const projects = [
   },
   {
     title: "NBA Tic Tac Toe",
-    description: "The coastlines of Denmark are documented in tonal colors in a pensive new series by Danish photographers Ulrik Hasemann and Mathias Svold; an ongoing project investigating how humans interact with and disrupt the Danish coast.",
-    src: "house.jpg",
-    link: "https://www.ignant.com/2019/03/13/a-photographic-series-depicting-the-uncertain-future-of-denmarks-treasured-coastlines/",
-    linkText: "See more",
+    description: "As a personal project, I developed 'NBA Tic-Tac-Toe,' a full-stack web application that brings an interactive twist to the classic game. Using Django and Python, I connected the app to a PostgreSQL database to pull in NBA data and wrote dynamic queries to validate user responses. I also had fun experimenting with Google’s Image-Search API to fetch player headshots on the fly, adding a unique visual element to the game.",
+    src: "nba-tac-toe.gif",
+    link: "https://www.youtube.com/watch?v=v2mr_DU-5Fo",
+    linkText: "Video demo",
     color: "#b6a7b2"
   },
   {
     title: "Personal Website",
-    description: "Dutch photographer Mark Rammers has shared with IGNANT the first chapter of his latest photographic project, ‘all over again’—captured while in residency at Hektor, an old farm in Los Valles, Lanzarote. Titled ‘Beginnings’, the mesmerizing collection of images is a visual and meditative journey into the origins of regrets and the uncertainty of stepping into new unknowns.",
-    src: "cactus.jpg",
-    link: "https://www.ignant.com/2023/04/12/mark-rammers-all-over-again-is-a-study-of-regret-and-the-willingness-to-move-forward/",
-    linkText: "See more",
+    description: "For my personal website, I leveraged my experience with React, TypeScript, and Jotai from my internship to craft a dynamic Next.js web app. Integrating Framer Motion and GSAP, I created a captivating display that highlights my exploration of new frontend and design techniques. The result is a visually engaging and technically sophisticated site that reflects my growth and creativity in web development.",
+    src: "website-landing.png",
+    link: "https://github.com/matthewcadena/me",
+    linkText: "Source code",
     color: "#cbbbc7"
   }
 ]
