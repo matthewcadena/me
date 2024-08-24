@@ -1,9 +1,6 @@
 .work{
   position: relative;
   width: 100%;
-  /* display: flex;
-  justify-content: center;
-  margin-bottom: 150vh; */
 }
 
 .backgroundImage {
@@ -55,3 +52,17 @@
   border-radius: 5px;
 }
 
+@media (max-width: 768px) {
+	.backgroundImage {
+    width: 100%;
+    height: 99vh;
+    position: absolute;
+    filter: brightness(50%);
+    
+  }
+  
+  .backgroundImage img {
+    object-fit: cover;
+    object-position: left;
+  }
+}

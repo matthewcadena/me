@@ -2,10 +2,6 @@
 import { projects } from "./data";
 import { useRef } from "react";
 import styles from "./projects.module.css";
-import Image from "next/image";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Card from "./Card";
 import { useScroll } from "framer-motion";
 
@@ -25,8 +21,5 @@ export default function ProjectCards() {
           return <Card key={index} i={index} {...project} progress={scrollYProgress} range={[index * .25,1]} targetScale={targetScale} />
         })
       }
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </div>);
 };

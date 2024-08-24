@@ -11,13 +11,13 @@
 }
 
 .footerContent {
-  height: 800px;
+  height: 600px;
   position: sticky;
-  top: calc(100vh - 800px);
+  top: calc(100vh - 600px);
 }
 
 .body {
-  background-color: #cbbbc7;
+  background-color: #565e49;
   padding-top: 2rem;
   padding-bottom: 2rem;
   padding-left: 3rem;
@@ -68,7 +68,7 @@
 .navHeading {
   margin-bottom: 0.5rem;
   text-transform: uppercase;
-  color: #777171;
+  color: #a4a999;
 }
 
 .copyrightText {
@@ -76,4 +76,25 @@
   color: white;
   margin-bottom: 2rem;
   padding-left: 3rem;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    position: absolute;
+    height: 600px;
+  }
+  
+  .footerWrapper {
+    position: absolute;
+    height: calc(100vh + 600px);
+    top: -100vh;
+  }
+  
+  .footerContent {
+    height: 600px;
+    position: absolute;
+    top: calc(100vh - 600px);
+    bottom: 0;
+  }
+  
 }
