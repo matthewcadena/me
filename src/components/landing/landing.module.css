@@ -9,7 +9,7 @@
 
 .sliderContainer {
   position: absolute;
-  top: calc(100vh - 30vh);
+  bottom: 0;
 }
 
 .slider {
@@ -23,7 +23,6 @@
   margin: 0px;
   color: white;
   font-size: 240px;
-  font-size: 500;
   text-transform: uppercase;
   line-height: 1;
 }
@@ -46,4 +45,11 @@
 
 .header p {
   margin-right: 35px;
+}
+
+@media (max-width: 768px) {
+  .slider p {
+    font-size: 120px;
+    bottom: 0;
+  }
 }

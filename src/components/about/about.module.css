@@ -21,3 +21,18 @@
   background-color: white;
   border-radius: 5px;
 }
+
+@media (max-width: 768px) {
+  .about {
+    font-size: 5vw;
+    margin-top: 20vw;
+    margin-left: 5vw;
+  }
+  .about p {
+    margin: 1vh;
+    position: relative;
+  }
+  .progressBar {
+    left: -5vw;
+  }
+}

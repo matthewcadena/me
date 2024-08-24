@@ -121,6 +121,7 @@ export default function Experience() {
                     alt="cmu ist logo"
                     title="cmu-ist"
                     className={styles.sideImg}
+                    id="cmuIst"
                   />
                 </div>
               </article>
