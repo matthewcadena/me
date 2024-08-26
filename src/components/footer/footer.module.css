@@ -104,3 +104,29 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .footer {
+    height: auto;
+    clip-path: none;
+  }
+
+  .footerWrapper {
+    position: relative;
+    height: auto;
+    top: 0;
+  }
+
+  .footerContent {
+    position: relative;
+    height: auto;
+    top: 0;
+  }
+
+  .copyrightText {
+    font-size: 0.5rem;
+    color: rgb(178, 178, 178);
+    margin-bottom: 1.4rem;
+    padding-left: 0rem;
+  }
+}
+
