@@ -4,8 +4,6 @@ import Image from "next/image";
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useAtom } from "jotai";
-import { isMobileViewAtom } from "../../state/atoms";
 
 export default function Card({
   i,
@@ -30,7 +28,6 @@ export default function Card({
   range: number[];
   targetScale: number;
 }) {
-  const [isMobileView] = useAtom(isMobileViewAtom);
   let container = useRef(null);
   let cardImage = useRef(null);
 
@@ -49,7 +46,7 @@ export default function Card({
     timeline.fromTo(
       cardImage.current,
       { transform: "scale(1.1, 1.1)" },
-      { transform: "scale(1, 1)" }  
+      { transform: "scale(1, 1)" }
     );
   });
 
@@ -59,7 +56,7 @@ export default function Card({
         style={{
           backgroundColor: color,
           scale,
-          top: isMobileView ? `calc(45vh + ${i * 25}px)` : `calc(-5vh + ${i * 25}px)`,
+          top: `calc(-5vh + ${i * 25}px)`,
         }}
         className={styles.card}
       >

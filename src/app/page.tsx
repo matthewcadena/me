@@ -7,16 +7,8 @@ import Work from "../components/work/Work";
 import Projects from "../components/projects/Projects";
 import Footer from "../components/footer/Footer";
 import Lenis from "lenis";
-import { useAtom } from "jotai";
-import { isMobileViewAtom } from "../state/atoms";
 
 export default function Home() {
-  const [isMobileView, setIsMobileView] = useAtom(isMobileViewAtom);
-  
-  if (typeof window !== "undefined") {
-    setIsMobileView(window.innerWidth <= 768);
-  }
-
   useEffect(() => {
     const lenis = new Lenis();
 
@@ -26,11 +18,10 @@ export default function Home() {
     }
 
     requestAnimationFrame(raf);
-
   }, []);
 
   return (
-    <div style={isMobileView ? { overflowX: "hidden" } : {}}>
+    <>
       <Header />
       <Landing />
       <div id="about">
@@ -43,6 +34,6 @@ export default function Home() {
         <Projects />
       </div>
       <Footer />
-    </div>
+    </>
   );
 }

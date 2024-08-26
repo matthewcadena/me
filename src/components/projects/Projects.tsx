@@ -6,11 +6,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ProjectCards from "./ProjectCards";
-import { useAtom } from "jotai";
-import { isMobileViewAtom } from "@/state/atoms";
 
 export default function Projects() {
-  const [isMobileView] = useAtom(isMobileViewAtom);
   gsap.registerPlugin(ScrollTrigger);
 
   const introImageRef = useRef(null);
@@ -38,18 +35,16 @@ export default function Projects() {
       },
     });
 
-    if (!isMobileView) {
-      introTimeline
-        .from(titleRef.current, { y: +200 }, 0)
-        .from(introImageRef.current, { y: +150, height: "250px" }, 0);
+    introTimeline
+      .from(titleRef.current, { y: +200 }, 0)
+      .from(introImageRef.current, { y: +150, height: "250px" }, 0);
 
-      progressTimeline.fromTo(
-        progressBarRef.current,
-        { width: "0%" },
-        { width: "100%", duration: 1, ease: "none" },
-        0
-      );
-    }
+    progressTimeline.fromTo(
+      progressBarRef.current,
+      { width: "0%" },
+      { width: "100%", duration: 1, ease: "none" },
+      0
+    );
   });
 
   return (

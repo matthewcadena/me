@@ -4,11 +4,8 @@ import styles from "./experience.module.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useAtom } from "jotai";
-import { isMobileViewAtom } from "../../../state/atoms";
 
 const AnimatedElement = ({ children }: { children: React.ReactNode }) => {
-  const [isMobileView] = useAtom(isMobileViewAtom);
   const object = useRef(null);
 
   useGSAP(() => {
@@ -23,13 +20,11 @@ const AnimatedElement = ({ children }: { children: React.ReactNode }) => {
       },
     });
 
-    if (!isMobileView) {
-      textTimeline.fromTo(
-        object.current,
-        { y: "+10px", filter: "blur(5px)", opacity: 0 },
-        { y: "0", filter: "blur(0px)", opacity: 1, ease: "power3.in" }
-      );
-    }
+    textTimeline.fromTo(
+      object.current,
+      { y: "+10px", filter: "blur(5px)", opacity: 0 },
+      { y: "0", filter: "blur(0px)", opacity: 1, ease: "power3.in" }
+    );
   });
   return <div ref={object}>{children}</div>;
 };
@@ -103,8 +98,8 @@ export default function Experience() {
                   </h2>
                   <p>
                     As a Research Assistant to Professor John Chin at Carnegie
-                    Mellon'sInstitute for Strategy & Technology, I dove into
-                    the complex world of self-coups and revolutionary events. I
+                    Mellon'sInstitute for Strategy & Technology, I dove into the
+                    complex world of self-coups and revolutionary events. I
                     cleaned and analyzed historical data, crafted detailed case
                     studies in LaTeX, and contributed to the Historical
                     Dictionary of Modern Self-Coups by creating bibliographic
