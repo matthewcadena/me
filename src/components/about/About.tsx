@@ -3,8 +3,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import styles from "./about.module.css";
+import { useAtom } from "jotai";
+import { isMobileViewAtom } from "../../state/atoms";
 
 const AnimatedFromLeft = ({ children }: { children: React.ReactNode }) => {
+  const [isMobileView] = useAtom(isMobileViewAtom);
   const text = useRef(null);
 
   useLayoutEffect(() => {
@@ -19,11 +22,13 @@ const AnimatedFromLeft = ({ children }: { children: React.ReactNode }) => {
       },
     });
 
-    textTimeline.fromTo(
-      text.current,
-      { opacity: 0, left: "-200px" },
-      { opacity: 1, left: "0", ease: "power3.Out" }
-    );
+    if (!isMobileView) {
+      textTimeline.fromTo(
+        text.current,
+        { opacity: 0, left: "-200px" },
+        { opacity: 1, left: "0", ease: "power3.Out" }
+      );
+    }
   }, []);
   return <p ref={text}>{children}</p>;
 };
