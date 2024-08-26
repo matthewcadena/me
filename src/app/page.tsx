@@ -7,9 +7,12 @@ import Work from "../components/work/Work";
 import Projects from "../components/projects/Projects";
 import Footer from "../components/footer/Footer";
 import Lenis from "lenis";
+import { useAtom } from "jotai";
+import { isMobileViewAtom } from "../state/atoms";
 
 export default function Home() {
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobileView, setIsMobileView] = useAtom(isMobileViewAtom);
+  
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -22,7 +25,7 @@ export default function Home() {
     requestAnimationFrame(raf);
   
     const checkIsMobile = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsMobileView(window.innerWidth <= 768);
     };
     checkIsMobile();
     window.addEventListener('resize', checkIsMobile);
@@ -30,12 +33,10 @@ export default function Home() {
       window.removeEventListener('resize', checkIsMobile);
     };
   }, []);
-  
 
-  console.log("isMobile", isMobile);
 
   return (
-    <div style={isMobile ? { overflowX: "hidden" } : {}}>
+    <div style={isMobileView ? { overflowX: "hidden" } : {}}>
       <Header />
       <Landing />
       <div id="about">

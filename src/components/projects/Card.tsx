@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useTransform, motion, useScroll, MotionValue } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { useAtom } from "jotai";
+import { isMobileViewAtom } from "../../state/atoms";
 
 export default function Card({
   i,
@@ -28,6 +30,7 @@ export default function Card({
   range: number[];
   targetScale: number;
 }) {
+  const [isMobileView] = useAtom(isMobileViewAtom);
   let container = useRef(null);
   let cardImage = useRef(null);
 
@@ -49,6 +52,7 @@ export default function Card({
       { transform: "scale(1, 1)" }  
     );
   });
+  console.log("We are in mobile view: ", isMobileView);
 
   return (
     <div className={styles.cardContainer} ref={container}>
@@ -56,7 +60,7 @@ export default function Card({
         style={{
           backgroundColor: color,
           scale,
-          top: `calc(-5vh + ${i * 25}px)`,
+          top: isMobileView ? `calc(45vh + ${i * 25}px)` : `calc(-5vh + ${i * 25}px)`,
         }}
         className={styles.card}
       >

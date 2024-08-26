@@ -25,7 +25,7 @@
 .workIntroImage{
   filter: brightness(60%);
   width: 350px;
-  height: 550px;
+  height:75%;
   position: absolute;
 }
 

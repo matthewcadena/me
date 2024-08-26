@@ -24,8 +24,8 @@
 
 .projectsIntroImage {
   filter: brightness(60%);
-  width: 350px;
-  height: 550px;
+  width: 25%;
+  height: 75%;
   position: absolute;
 }
 

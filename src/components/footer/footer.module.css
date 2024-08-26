@@ -73,28 +73,34 @@
 
 .copyrightText {
   font-size: 1rem;
-  color: white;
+  color: #a4a999;
   margin-bottom: 2rem;
   padding-left: 3rem;
 }
 
 @media (max-width: 768px) {
   .footer {
-    position: absolute;
-    height: 600px;
+    height: auto;
+    clip-path: none;
   }
-  
+
   .footerWrapper {
-    position: absolute;
-    height: calc(100vh + 600px);
-    top: -100vh;
+    position: relative;
+    height: auto;
+    top: 0;
   }
-  
+
   .footerContent {
-    height: 600px;
-    position: absolute;
-    top: calc(100vh - 600px);
-    bottom: 0;
+    position: relative;
+    height: auto;
+    top: 0;
   }
-  
+
+  .copyrightText {
+    font-size: 0.5rem;
+    color: rgb(178, 178, 178);
+    margin-bottom: 1.4rem;
+    padding-left: 0rem;
+  }
 }
+
