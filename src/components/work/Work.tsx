@@ -6,8 +6,11 @@ import Experience from "./experience/Experience";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useAtom } from "jotai";
+import { isMobileViewAtom } from "@/state/atoms";
 
 export default function Work() {
+  const [isMobileView] = useAtom(isMobileViewAtom);
   gsap.registerPlugin(ScrollTrigger);
 
   const introImageRef = useRef(null);
@@ -35,19 +38,19 @@ export default function Work() {
       },
     });
 
-    introTimeline
-      .from(titleRef.current, { y: +200 }, 0)
-      .from(introImageRef.current, { y: +150, height: "250px" }, 0);
+    if (!isMobileView) {
+      introTimeline
+        .from(titleRef.current, { y: +200 }, 0)
+        .from(introImageRef.current, { y: +150, height: "250px" }, 0);
 
-    progressTimeline
-      .fromTo(
+      progressTimeline.fromTo(
         progressBarRef.current,
         { width: "0%" },
-        { width: "100%", duration: 1, ease: "none" }, 0
+        { width: "100%", duration: 1, ease: "none" },
+        0
       );
-    
+    }
   });
-
 
   return (
     <div className={styles.work} ref={containerRef}>

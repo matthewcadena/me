@@ -52,7 +52,6 @@ export default function Card({
       { transform: "scale(1, 1)" }  
     );
   });
-  console.log("We are in mobile view: ", isMobileView);
 
   return (
     <div className={styles.cardContainer} ref={container}>
