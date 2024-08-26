@@ -23,16 +23,16 @@ body::-webkit-scrollbar {
  }
 
  @media (max-width: 768px) {
-  html, body {
+  .container {
     overflow-x: hidden;
   }
-  body {
+  .container {
     position: relative
   }
 }
 
 @media (max-width: 1024px) {
-  html, body {
+  .container {
     overflow-x: hidden;
   }
 }
