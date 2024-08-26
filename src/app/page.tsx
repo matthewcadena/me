@@ -12,6 +12,10 @@ import { isMobileViewAtom } from "../state/atoms";
 
 export default function Home() {
   const [isMobileView, setIsMobileView] = useAtom(isMobileViewAtom);
+  
+  if (typeof window !== "undefined") {
+    setIsMobileView(window.innerWidth <= 768);
+  }
 
   useEffect(() => {
     const lenis = new Lenis();
@@ -23,18 +27,7 @@ export default function Home() {
 
     requestAnimationFrame(raf);
 
-    const checkIsMobile = () => {
-      setIsMobileView(window.innerWidth <= 768);
-    };
-
-    checkIsMobile();
-
-    window.addEventListener("resize", checkIsMobile);
-
-    return () => {
-      window.removeEventListener("resize", checkIsMobile);
-    };
-  }, [isMobileView, setIsMobileView]);
+  }, []);
 
   return (
     <div style={isMobileView ? { overflowX: "hidden" } : {}}>

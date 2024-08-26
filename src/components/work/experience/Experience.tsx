@@ -103,7 +103,7 @@ export default function Experience() {
                   </h2>
                   <p>
                     As a Research Assistant to Professor John Chin at Carnegie
-                    Mellon's Institute for Politics and Strategy, I dove into
+                    Mellon'sInstitute for Strategy & Technology, I dove into
                     the complex world of self-coups and revolutionary events. I
                     cleaned and analyzed historical data, crafted detailed case
                     studies in LaTeX, and contributed to the Historical
