@@ -12,28 +12,29 @@ import { isMobileViewAtom } from "../state/atoms";
 
 export default function Home() {
   const [isMobileView, setIsMobileView] = useAtom(isMobileViewAtom);
-  
 
   useEffect(() => {
     const lenis = new Lenis();
-  
+
     function raf(time: number) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-  
+
     requestAnimationFrame(raf);
-  
+
     const checkIsMobile = () => {
       setIsMobileView(window.innerWidth <= 768);
     };
-    checkIsMobile();
-    window.addEventListener('resize', checkIsMobile);
-    return () => {
-      window.removeEventListener('resize', checkIsMobile);
-    };
-  }, []);
 
+    checkIsMobile();
+
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, [isMobileView, setIsMobileView]);
 
   return (
     <div style={isMobileView ? { overflowX: "hidden" } : {}}>

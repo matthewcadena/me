@@ -1,3 +1,4 @@
+"use client";
 import React, { useLayoutEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
@@ -8,28 +9,31 @@ import { isMobileViewAtom } from "../../state/atoms";
 
 const AnimatedFromLeft = ({ children }: { children: React.ReactNode }) => {
   const [isMobileView] = useAtom(isMobileViewAtom);
+  console.log("upon render", isMobileView);
   const text = useRef(null);
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    const textTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: text.current,
-        start: "0px bottom",
-        end: "+=300px",
-        scrub: 1,
-      },
-    });
-
+    console.log("in the effect", isMobileView);
     if (!isMobileView) {
+      console.log("we are somehow in the effect");
+      gsap.registerPlugin(ScrollTrigger);
+
+      const textTimeline = gsap.timeline({
+        scrollTrigger: {
+          trigger: text.current,
+          start: "0px bottom",
+          end: "+=300px",
+          scrub: 1,
+        },
+      });
+
       textTimeline.fromTo(
         text.current,
         { opacity: 0, left: "-200px" },
         { opacity: 1, left: "0", ease: "power3.Out" }
       );
     }
-  }, []);
+  }, [isMobileView]);
   return <p ref={text}>{children}</p>;
 };
 
