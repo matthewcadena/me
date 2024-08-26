@@ -1,12 +1,14 @@
 "use client";
 import { useRef } from "react";
 import styles from "./experience.module.css";
-import Image from "next/image";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useAtom } from "jotai";
+import { isMobileViewAtom } from "../../../state/atoms";
 
 const AnimatedElement = ({ children }: { children: React.ReactNode }) => {
+  const [isMobileView] = useAtom(isMobileViewAtom);
   const object = useRef(null);
 
   useGSAP(() => {
@@ -21,11 +23,13 @@ const AnimatedElement = ({ children }: { children: React.ReactNode }) => {
       },
     });
 
-    textTimeline.fromTo(
-      object.current,
-      { y: "+10px", filter: "blur(5px)", opacity: 0 },
-      { y: "0", filter: "blur(0px)", opacity: 1, ease: "power3.in" }
-    );
+    if (!isMobileView) {
+      textTimeline.fromTo(
+        object.current,
+        { y: "+10px", filter: "blur(5px)", opacity: 0 },
+        { y: "0", filter: "blur(0px)", opacity: 1, ease: "power3.in" }
+      );
+    }
   });
   return <div ref={object}>{children}</div>;
 };
