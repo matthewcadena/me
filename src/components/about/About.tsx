@@ -48,25 +48,14 @@ export default function About() {
     aboutTl.fromTo;
   });
 
-  let phrases = [];
-
-  if (typeof window !== "undefined" && window.innerWidth < 768) {
-    phrases = [
-      "I'm a junior at", "Carnegie Mellon, studying", "Information Systems.",
-      "I play on the men's", "varsity soccer team,",
-      "and I'm passionate", "about software.",
-      "I believe in writing", "clean code that makes", "a difference.",
-    ];
-  } else {
-    phrases = [
-      "I'm a junior at Carnegie Mellon,",
-      "studying Information Systems.",
-      "I play on the men's varsity soccer team,",
-      "and I'm passionate about software.",
-      "I believe in writing clean code",
-      "that makes a difference.",
-    ];
-  }
+  const phrases = [
+    "I'm a junior at Carnegie Mellon,",
+    "studying Information Systems.",
+    "I play on the men's varsity soccer team,",
+    "and I'm passionate about software.",
+    "I believe in writing clean code",
+    "that makes a difference.",
+  ];
 
   return (
     <div className={styles.about} ref={about} id="#about">
