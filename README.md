@@ -10,7 +10,7 @@ I leveraged my experience from my 2024 software engineering internship at Ford M
 - **State Management**: Utilized **Jotai** for efficient state management, inspired by patterns and techniques I applied during my internship.
 - **Dynamic Animations**: Integrated **Framer Motion** and **GSAP** to create a smooth, interactive, and visually appealing user experience.
 - **Hosting**: The website is deployed using **AWS**.
-- 
+
 ## Tech Stack
 - **Next.js**
 - **React**
