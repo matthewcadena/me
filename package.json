@@ -4,10 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "prestart": "next build",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "preview": "npx serve out"
   },
   "dependencies": {
     "@gsap/react": "^2.1.1",
