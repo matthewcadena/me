@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-  output: "export",
+  output: "npx serve@latest out",
   images: {
     unoptimized: true,
   },
-  distDir: "dist",
 };
 
 export default nextConfig;
