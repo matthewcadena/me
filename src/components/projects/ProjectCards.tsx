@@ -18,7 +18,7 @@ export default function ProjectCards() {
        {
         projects.map( (project, index) => {
           const targetScale = 1 - (projects.length - index) * 0.05;
-          return <Card key={index} i={index} {...project} progress={scrollYProgress} range={[index * .25,1]} targetScale={targetScale} />
+          return <Card key={index} i={index} {...project} progress={scrollYProgress} range={[index * .17,1]} targetScale={targetScale} />
         })
       }
   </div>);
