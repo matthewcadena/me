@@ -1,6 +1,6 @@
 export const projects = [
   {
-    title: "Cool Stuff at Nextdoor (more coming soon!)",
+    title: "Cool Projects at Nextdoor (more coming soon!)",
     description:
       "As a 2025 summer intern on Nextdoor’s Notifications team, I work on backend features to personalize notifications for millions of users daily. I’m learning to optimize delivery pipelines, implement user-targeting logic, and ensure high availability and performance at scale. Collaborating with cross-functional teams, I write tests, improve monitoring, and contribute to production services that boost user engagement.",
     src: "nextdoor-hq.jpeg",
@@ -27,7 +27,7 @@ export const projects = [
     color: "#b89fa9",
   },
   {
-    title: "RNN Language Model with Self-Attention",
+    title: "RNN-LM with Self-Attention",
     description:
       "To bolster my foundational knowledge of machine learning models and techniques, I built a recurrent neural network language model augmented with scaled dot-product self-attention. I implemented a custom RNNCell, attention mechanisms, and training loops in PyTorch to predict next-token probabilities on the TinyStories dataset. The model handles long-range dependencies by computing attention weights over all previous hidden states at each timestep. Due to CMU's academic integrity policies, the code is in a private repository. If you’d like access, please email me and I can invite you to view the repo.",
     src: "rnn-attention.png",
@@ -47,7 +47,7 @@ export const projects = [
   {
     title: "Dynamic Memory Allocator",
     description:
-      "As my most low-level project, I implemented a custom 64-bit implicit free-list memory allocator with segregated free lists for course. The allocator maintains 16-byte alignment, coalesces free blocks, and uses size classes to minimize fragmentation and maximize throughput. Due to CMU’s academic integrity policies, the code is in a private repository. If you’d like access, please email me and I can invite you to view the repo. (Image credit: Bryant and O’Hallaron, Computer Systems: A Programmer’s Perspective, Third Edition)",
+      "As a lower-level project, I implemented a custom 64-bit implicit free-list memory allocator with segregated free lists. The allocator maintains 16-byte alignment, coalesces free blocks, and uses size classes to minimize fragmentation and maximize throughput. Due to CMU’s academic integrity policies, the code is in a private repository. If you’d like access, please email me and I can invite you to view the repo. (Image credit: Bryant and O’Hallaron, Computer Systems: A Programmer’s Perspective, Third Edition)",
     src: "malloc-lab.png",
     link: "mailto:mcadena@andrew.cmu.edu",
     linkText: "Email me for access",
@@ -56,7 +56,7 @@ export const projects = [
   {
     title: "Personal Website",
     description:
-      "For this website, I leveraged my experience with React, TypeScript, and Jotai from my internship to craft a dynamic Next.js web app. Using Framer Motion and GSAP, I created a captivating display that highlights my exploration of new frontend and design techniques. The result is a visually engaging and technically sophisticated site that reflects my growth and creativity in web development.",
+      "For this website, I leveraged my experience with React, TypeScript, and Jotai from my internship at Ford to craft a dynamic Next.js web app. Using Framer Motion and GSAP, I created a captivating display that highlights my exploration of new frontend and design techniques. The result is a visually engaging and technically sophisticated site that reflects my growth and creativity in web development.",
     src: "website-landing.png",
     link: "https://github.com/matthewcadena/me",
     linkText: "Source code",

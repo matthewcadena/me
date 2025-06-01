@@ -178,7 +178,6 @@
 		background: var(--tag-clr);
 		border-radius: 2px;
 		color: var(--primary-clr);
-		font-size: clamp(1.15rem, 1vw, 1.3rem);
 		list-style-position: inside;
 	}
 
