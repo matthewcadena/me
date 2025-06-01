@@ -50,11 +50,11 @@ export default function About() {
   });
 
   const phrases = [
-    "I'm a junior at Carnegie Mellon,",
+    "I'm a senior at Carnegie Mellon,",
     "studying Information Systems.",
     "I play on the men's varsity soccer team,",
     "and I'm passionate about software.",
-    "I believe in writing clean code",
+    "I believe in writing well-structured code",
     "that makes a difference.",
   ];
 

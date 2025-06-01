@@ -18,11 +18,15 @@ const Section1 = () => {
   );
 };
 
+const currentYear = new Date().getFullYear();
+
 const Section2 = () => {
   return (
     <div className={styles.section2Container}>
       <h1 className={styles.section2Heading}>Matt Cadena</h1>
-      <p className={styles.copyrightText}>© copyright 2025</p>
+      <p className={styles.copyrightText}>
+        © copyright {currentYear}
+      </p>
     </div>
   );
 };

@@ -42,18 +42,55 @@ export default function Experience() {
               From Academic Research to Industry Innovation
             </h2>
             <p className={styles.info}>
-              Over the past two summers, I've gained valuable experience in both
-              industry and academia. In 2024, I worked as a Software Engineering
-              Intern at Ford in Dearborn, MI, contributing to products in the
-              Enterprise Technology division. The summer before, I was a
-              Research Assistant at the Institute for Politics and Strategy at
-              Carnegie Mellon University, where I focused on historical research
-              related to Coup D'etats.
+              Over the past few years, I've gained valuable experience in both
+              industry and academia. Currently, I'm interning at Nextdoor on the
+              Notifications team, and in 2024 I worked as a Software Engineer
+              Intern at Ford. Before that, I was a Research Assistant at Carnegie
+              Mellon University's Institute for Strategy & Technology.
             </p>
           </AnimatedElement>
+
           <section className={styles.projects}>
+            {/* Nextdoor Internship */}
             <AnimatedElement>
               <article className={`${styles.project} ${styles.project1}`}>
+                <div>
+                  <h3>2025 SUMMER (CURRENT)</h3>
+                  <h2 className={styles.positionTitle}>
+                    Software Engineer Intern: Nextdoor
+                  </h2>
+                  <p>
+                    At Nextdoor, I'm working on the Notifications team to enhance
+                    personalization and reliability for millions of daily users.
+                    My focus is backend development—optimizing delivery pipelines,
+                    building user-segmentation logic, and improving monitoring and
+                    observability in our services. Collaborating with engineers and
+                    product managers, I contribute to large-scale production code
+                    that helps to cultivate a kinder world.
+                  </p>
+                  <p>Skills/tools I'm learning and honing:</p>
+                  <ul className={styles.techStack}>
+                    <li>A/B Testing & Experimentation</li>
+                    <li>Data Analytics & Performance Metrics</li>
+                    <li>Redis Caching Strategies</li>
+                    <li>Message Queue Architectures</li>
+                    <li>System Observability & Logging</li>
+                  </ul>
+                </div>
+                <div>
+                  <img
+                    src="./images/nextdoor-meeting.png"
+                    alt="Nextdoor logo"
+                    title="nextdoor"
+                    className={styles.sideImg}
+                  />
+                </div>
+              </article>
+            </AnimatedElement>
+
+            {/* Ford Internship */}
+            <AnimatedElement>
+              <article className={`${styles.project} ${styles.project2}`}>
                 <img
                   src="./images/mach-e.jpg"
                   alt="Me with fellow interns at Ford"
@@ -67,21 +104,19 @@ export default function Experience() {
                   </h2>
                   <p>
                     At Ford, I embraced Test-Driven Development (TDD) and pair
-                    programming to craft a dynamic React-based tool for Call
-                    Center Agents, replacing an outdated system with a
-                    streamlined search experience. Tackling a tricky 30-second
-                    timer glitch in a Lean Coffee app was another highlight,
-                    where our collaborative approach ensured a flawless user
-                    experience. Mentoring new interns was a rewarding part of
-                    the summer, where I guided them through a thoughtfully
-                    crafted onboarding process, turning their first days into a
-                    smooth and productive start.
+                    programming to craft a React-based tool for Call Center Agents,
+                    replacing an outdated system with a streamlined search
+                    experience. Tackling a tricky 30-second timer glitch in a Lean
+                    Coffee app was another highlight, where our collaborative
+                    approach ensured a flawless user experience. Mentoring new interns
+                    and guiding them through a thoughtful onboarding process was also
+                    a rewarding part of the summer.
                   </p>
                   <p>Skills/tools I learned and developed:</p>
                   <ul className={styles.techStack}>
                     <li>React</li>
                     <li>Google Cloud Platform (GCP)</li>
-                    <li>TekTton CI/CD</li>
+                    <li>Tekton CI/CD</li>
                     <li>GitHub Actions</li>
                     <li>MongoDB</li>
                     <li>Jotai</li>
@@ -89,23 +124,25 @@ export default function Experience() {
                 </div>
               </article>
             </AnimatedElement>
+
+            {/* Research Assistant */}
             <AnimatedElement>
-              <article className={`${styles.project} ${styles.project2}`}>
+              <article className={`${styles.project} ${styles.project3}`}>
                 <div>
                   <h3>2023 SUMMER</h3>
                   <h2 className={styles.positionTitle}>
-                    Research Assistant: CMU Institute for Strategy & Technology{" "}
+                    Research Assistant: CMU Institute for Strategy & Technology
                   </h2>
                   <p>
                     As a Research Assistant to Professor John Chin at Carnegie
-                    Mellon'sInstitute for Strategy & Technology, I dove into the
-                    complex world of self-coups and revolutionary events. I
-                    cleaned and analyzed historical data, crafted detailed case
-                    studies in LaTeX, and contributed to the Historical
-                    Dictionary of Modern Self-Coups by creating bibliographic
-                    entries. A highlight of my work was researching and writing
-                    about the Castro brothers' self-coups, weaving their story
-                    into the broader tapestry of political upheaval.
+                    Mellon's Institute for Strategy & Technology, I dove into the
+                    complex world of self-coups and revolutionary events. I cleaned
+                    and analyzed historical data, crafted detailed case studies in
+                    LaTeX, and contributed to the Historical Dictionary of Modern
+                    Self-Coups by creating bibliographic entries. Researching and
+                    writing about the Castro brothers' self-coups was a highlight,
+                    weaving their story into the broader tapestry of political
+                    upheaval.
                   </p>
                   <p>Skills/tools I learned and developed:</p>
                   <ul className={styles.techStack}>
@@ -117,10 +154,9 @@ export default function Experience() {
                 <div>
                   <img
                     src="./images/cmuist.png"
-                    alt="cmu ist logo"
+                    alt="CMU IST logo"
                     title="cmu-ist"
                     className={styles.sideImg}
-                    id="cmuIst"
                   />
                 </div>
               </article>

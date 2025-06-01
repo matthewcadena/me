@@ -51,7 +51,7 @@ export default function Work() {
     <div className={styles.work} ref={containerRef}>
       <div className={styles.backgroundImage}>
         <Image
-          src={"/images/interns-cropped.jpg"}
+          src={"/images/nextdoor-intro.jpeg"}
           fill={true}
           alt="work-background-image"
         />
