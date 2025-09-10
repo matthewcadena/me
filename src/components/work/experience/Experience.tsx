@@ -30,7 +30,7 @@ const AnimatedElement = ({ children }: { children: React.ReactNode }) => {
 };
 
 export default function Experience() {
-  useGSAP(() => {});
+  useGSAP(() => { });
 
   return (
     <>
@@ -55,31 +55,31 @@ export default function Experience() {
             <AnimatedElement>
               <article className={`${styles.project} ${styles.project1}`}>
                 <div>
-                  <h3>2025 SUMMER (CURRENT)</h3>
+                  <h3>2025 SUMMER</h3>
                   <h2 className={styles.positionTitle}>
                     Software Engineer Intern: Nextdoor
                   </h2>
                   <p>
-                    At Nextdoor, I'm working on the Notifications team to enhance
-                    personalization and reliability for millions of daily users.
-                    My focus is backend development—optimizing delivery pipelines,
-                    building user-segmentation logic, and improving monitoring and
-                    observability in our services. Collaborating with engineers and
-                    product managers, I contribute to large-scale production code
-                    that helps to cultivate a kinder world.
+                    On the Notifications team, I contributed to backend systems that deliver
+                    personalized, reliable experiences to millions of users. I helped improve
+                    ranking logic for Local News emails, boosting engagement with a 14.8% lift
+                    in click-through rate, and worked on personalized email campaigns that
+                    reached over 10M sends during my time as an intern. I also built an internal 
+                    React + GraphQL tool that cut ML model debugging time by 97%, enabling the team 
+                    to ship notification features aster and with greater confidence.
                   </p>
-                  <p>Skills/tools I'm learning and honing:</p>
+                  <p>Skills/tools I applied and deepened:</p>
                   <ul className={styles.techStack}>
                     <li>A/B Testing & Experimentation</li>
                     <li>Data Analytics & Performance Metrics</li>
-                    <li>Redis Caching Strategies</li>
-                    <li>Message Queue Architectures</li>
-                    <li>System Observability & Logging</li>
+                    <li>Scalable Backend Development</li>
+                    <li>React & GraphQL Tooling</li>
+                    <li>System Observability & Debugging</li>
                   </ul>
                 </div>
                 <div>
                   <img
-                    src="./images/nextdoor-meeting.png"
+                    src="./images/nextdoor-presentation.jpg"
                     alt="Nextdoor logo"
                     title="nextdoor"
                     className={styles.sideImg}
