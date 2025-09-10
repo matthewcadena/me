@@ -66,7 +66,7 @@ export default function Experience() {
                     in click-through rate, and worked on personalized email campaigns that
                     reached over 10M sends during my time as an intern. I also built an internal 
                     React + GraphQL tool that cut ML model debugging time by 97%, enabling the team 
-                    to ship notification features aster and with greater confidence.
+                    to ship notification features faster and with greater confidence.
                   </p>
                   <p>Skills/tools I applied and deepened:</p>
                   <ul className={styles.techStack}>
