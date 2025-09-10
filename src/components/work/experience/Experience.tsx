@@ -42,11 +42,10 @@ export default function Experience() {
               From Academic Research to Industry Innovation
             </h2>
             <p className={styles.info}>
-              Over the past few years, I've gained valuable experience in both
-              industry and academia. Currently, I'm interning at Nextdoor on the
-              Notifications team, and in 2024 I worked as a Software Engineer
-              Intern at Ford. Before that, I was a Research Assistant at Carnegie
-              Mellon University's Institute for Strategy & Technology.
+              Over the past few years, I've gained valuable experience in both industry and academia.
+              I recently completed an internship at Nextdoor on the Notifications team.
+              In 2024, I worked as a Software Engineer Intern at Ford, and before that,
+              I was a Research Assistant at Carnegie Mellon University's Institute for Strategy & Technology.
             </p>
           </AnimatedElement>
 
