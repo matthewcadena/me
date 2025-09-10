@@ -1,9 +1,9 @@
 export const projects = [
   {
-    title: "Cool Projects at Nextdoor (more coming soon!)",
+    title: "Cool Projects at Nextdoor",
     description:
-      "As a 2025 summer intern on Nextdoor’s Notifications team, I work on backend features to personalize notifications for millions of users daily. I’m learning to optimize delivery pipelines, implement user-targeting logic, and ensure high availability and performance at scale. Collaborating with cross-functional teams, I write tests, improve monitoring, and contribute to production services that boost user engagement.",
-    src: "nextdoor-hq.jpeg",
+      "As a 2025 summer intern on Nextdoor's Notifications team, I built large-scale personalization features that improved user engagement across millions of daily notifications. Highlights include boosting Local News email CTR by 14.8% through ranking improvements, launching personalized Trending Post emails to 11.6M sends, and creating a React + GraphQL simulator that cut debugging time by 97%.",
+    src: "nextdoor-baseball.jpg",
     link: "https://about.nextdoor.com/",
     linkText: "Learn more about Nextdoor",
     color: "#9b7d8c",
