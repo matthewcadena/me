@@ -42,11 +42,10 @@ export default function Experience() {
               From Academic Research to Industry Innovation
             </h2>
             <p className={styles.info}>
-              Over the past few years, I've gained valuable experience in both
-              industry and academia. Currently, I'm interning at Nextdoor on the
-              Notifications team, and in 2024 I worked as a Software Engineer
-              Intern at Ford. Before that, I was a Research Assistant at Carnegie
-              Mellon University's Institute for Strategy & Technology.
+              Over the past few years, I've gained valuable experience in both industry and academia.
+              I recently completed an internship at Nextdoor on the Notifications team.
+              In 2024, I worked as a Software Engineer Intern at Ford, and before that,
+              I was a Research Assistant at Carnegie Mellon University's Institute for Strategy & Technology.
             </p>
           </AnimatedElement>
 
@@ -64,8 +63,8 @@ export default function Experience() {
                     personalized, reliable experiences to millions of users. I helped improve
                     ranking logic for Local News emails, boosting engagement with a 14.8% lift
                     in click-through rate, and worked on personalized email campaigns that
-                    reached over 10M sends during my time as an intern. I also built an internal 
-                    React + GraphQL tool that cut ML model debugging time by 97%, enabling the team 
+                    reached over 10M sends during my time as an intern. I also built an internal
+                    React + GraphQL tool that cut ML model debugging time by 97%, enabling the team
                     to ship notification features aster and with greater confidence.
                   </p>
                   <p>Skills/tools I applied and deepened:</p>
