@@ -1,0 +1,292 @@
+:root {
+  --bg: #faf8f3;
+  --ink: #211e1a;
+  --muted: #6f6960;
+  --link: #1f4e79;
+  --rule: #e5e0d5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161412;
+    --ink: #e8e4dc;
+    --muted: #9a948a;
+    --link: #8ab4d8;
+    --rule: #2d2a26;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light dark;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  line-height: 1.7;
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 1.75rem 1.5rem 3rem;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+a {
+  color: var(--link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: opacity 150ms ease;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+h1 {
+  font-size: 1.4rem;
+  font-weight: 450;
+  line-height: 1.25;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: 0.9375rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Masthead */
+
+.masthead {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+}
+
+.masthead-name {
+  font-weight: 550;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.masthead-name:hover {
+  opacity: 1;
+  color: var(--link);
+}
+
+.masthead-nav {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.masthead-nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.masthead-nav a:hover {
+  opacity: 1;
+  color: var(--link);
+}
+
+.masthead-nav a[aria-current="page"] {
+  color: var(--ink);
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid var(--rule);
+  margin-top: 4rem;
+  padding-top: 1rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+.footer a {
+  color: var(--muted);
+}
+
+/* Home */
+
+.portrait {
+  width: 100%;
+  max-width: 36rem;
+  border-radius: 6px;
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.bio p + p {
+  margin-top: 1rem;
+}
+
+.contact-links {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.75rem;
+  align-items: baseline;
+}
+
+.contact-links .sep {
+  color: var(--muted);
+}
+
+/* Work */
+
+.page-intro {
+  margin-bottom: 2.5rem;
+}
+
+.work-entry {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 0 1.25rem;
+  margin-bottom: 2.75rem;
+}
+
+.work-period {
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.work-body h2 {
+  margin-bottom: 0.5rem;
+}
+
+.work-body h2 .company {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.work-tags {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .work-entry {
+    grid-template-columns: 1fr;
+  }
+
+  .work-period {
+    font-size: 0.8125rem;
+    margin-bottom: 0.25rem;
+  }
+}
+
+/* Projects */
+
+.project {
+  border-bottom: 1px solid var(--rule);
+}
+
+.project:first-of-type {
+  border-top: 1px solid var(--rule);
+}
+
+.project summary {
+  display: flex;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.875rem 0;
+  cursor: pointer;
+  list-style: none;
+}
+
+.project summary::-webkit-details-marker {
+  display: none;
+}
+
+.project summary::before {
+  content: "▸";
+  color: var(--muted);
+  font-size: 0.8em;
+  transition: transform 150ms ease;
+}
+
+.project[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.project summary:hover .project-title {
+  color: var(--link);
+}
+
+.project-title {
+  font-weight: 400;
+  transition: color 150ms ease;
+}
+
+.project-year {
+  margin-left: auto;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.project-body {
+  padding: 0.25rem 0 1.5rem 1.35rem;
+  animation: fade-in 200ms ease;
+}
+
+.project-body img {
+  max-width: 26rem;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.project-body p + p {
+  margin-top: 1rem;
+}
+
+.project-link {
+  margin-top: 1rem;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
