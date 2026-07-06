@@ -31,7 +31,7 @@ const rendered = await Promise.all(
   {
     rendered.map(({ entry, Content }) => (
       <article class="work-entry">
-        <div class="work-year">{entry.data.year}</div>
+        <div class="work-period">{entry.data.period}</div>
         <div class="work-body">
           <h2>
             {entry.data.title}{" "}

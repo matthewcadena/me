@@ -160,12 +160,12 @@ img {
 
 .work-entry {
   display: grid;
-  grid-template-columns: 4.5rem 1fr;
+  grid-template-columns: 6.5rem 1fr;
   gap: 0 1.25rem;
   margin-bottom: 2.75rem;
 }
 
-.work-year {
+.work-period {
   color: var(--muted);
   font-variant-numeric: tabular-nums;
 }
@@ -190,7 +190,7 @@ img {
     grid-template-columns: 1fr;
   }
 
-  .work-year {
+  .work-period {
     font-size: 0.8125rem;
     margin-bottom: 0.25rem;
   }

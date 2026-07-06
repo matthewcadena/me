@@ -6,7 +6,8 @@ const work = defineCollection({
   schema: z.object({
     title: z.string(),
     company: z.string(),
-    year: z.string(),
+    // Free-form label for the entry's timeframe, e.g. "Summer '25" or "2025–2027".
+    period: z.string(),
     order: z.number(),
     tags: z.array(z.string()),
   }),

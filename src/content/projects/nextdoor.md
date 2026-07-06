@@ -1,5 +1,5 @@
 ---
-title: Cool Projects at Nextdoor
+title: Projects at Nextdoor
 year: "2025"
 order: 1
 image: /images/nextdoor-baseball.jpg
