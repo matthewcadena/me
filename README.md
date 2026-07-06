@@ -10,7 +10,7 @@ The site is built with **Astro** and **TypeScript**. Every page is static HTML g
 
 - **Astro** (static site generation, content collections)
 - **TypeScript**
-- **Geist Mono** (typeface, self-hosted via Fontsource)
+- **Hanken Grotesk** (typeface, self-hosted via Fontsource)
 - **AWS S3** (hosting, deployed by GitHub Actions)
 
 ## Development

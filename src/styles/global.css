@@ -29,8 +29,9 @@ html {
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: "Geist Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
-  font-size: 0.9rem;
+  font-family: "Manrope", "Helvetica Neue", Arial, sans-serif;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
   line-height: 1.7;
   max-width: 44rem;
   margin: 0 auto;
@@ -51,15 +52,15 @@ a:hover {
 }
 
 h1 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.4rem;
+  font-weight: 450;
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 0.9375rem;
+  font-weight: 550;
   line-height: 1.5;
 }
 
@@ -82,7 +83,7 @@ img {
 }
 
 .masthead-name {
-  font-weight: 600;
+  font-weight: 550;
   color: var(--ink);
   text-decoration: none;
 }
@@ -234,7 +235,7 @@ img {
 }
 
 .project-title {
-  font-weight: 600;
+  font-weight: 550;
   transition: color 150ms ease;
 }
 
