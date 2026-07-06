@@ -1,0 +1,60 @@
+---
+import "@fontsource-variable/newsreader";
+import "@fontsource-variable/newsreader/wght-italic.css";
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+const nav = [
+  { href: "/work/", label: "work" },
+  { href: "/projects/", label: "projects" },
+  { href: "/files/matt-cadena-resume.pdf", label: "resume" },
+];
+const currentPath = Astro.url.pathname;
+const year = new Date().getFullYear();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.ico" sizes="32x32" />
+    <link rel="icon" href="/icon0.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-icon.png" />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <header class="masthead">
+      <a class="masthead-name" href="/">Matt Cadena</a>
+      <nav class="masthead-nav">
+        {
+          nav.map((item) => (
+            <a
+              href={item.href}
+              aria-current={currentPath === item.href ? "page" : undefined}
+              target={item.href.endsWith(".pdf") ? "_blank" : undefined}
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+    </header>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      © {year} Matt Cadena ·
+      <a href="https://github.com/matthewcadena/me">source</a>
+    </footer>
+  </body>
+</html>

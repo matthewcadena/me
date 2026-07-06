@@ -1,0 +1,48 @@
+---
+import Base from "../layouts/Base.astro";
+
+const links = [
+  { href: "https://github.com/matthewcadena", label: "github" },
+  { href: "https://www.linkedin.com/in/matt-cadena/", label: "linkedin" },
+  { href: "/files/matt-cadena-resume.pdf", label: "resume" },
+  { href: "mailto:matt.cadena9@gmail.com", label: "email" },
+];
+---
+
+<Base
+  title="Matt Cadena"
+  description="Matt Cadena — software engineer studying Information Systems at Carnegie Mellon."
+>
+  <img
+    class="portrait"
+    src="/images/matt-cmu-crop.jpg"
+    alt="Matt Cadena playing soccer at Carnegie Mellon"
+    width="5634"
+    height="2440"
+  />
+
+  <div class="bio">
+    <p>
+      I'm a senior at Carnegie Mellon, studying Information Systems. I play on
+      the men's varsity soccer team, and I'm passionate about software. I
+      believe in writing well-structured code that makes a difference.
+    </p>
+  </div>
+
+  <div class="contact-links">
+    {
+      links.map((link, i) => (
+        <>
+          {i > 0 && <span class="sep">·</span>}
+          <a
+            href={link.href}
+            target={link.href.startsWith("http") || link.href.endsWith(".pdf") ? "_blank" : undefined}
+            rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
+          >
+            {link.label}
+          </a>
+        </>
+      ))
+    }
+  </div>
+</Base>

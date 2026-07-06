@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../../layouts/Base.astro";
+
+const entries = (await getCollection("work")).sort(
+  (a, b) => a.data.order - b.data.order
+);
+
+const rendered = await Promise.all(
+  entries.map(async (entry) => ({
+    entry,
+    Content: (await render(entry)).Content,
+  }))
+);
+---
+
+<Base
+  title="Work — Matt Cadena"
+  description="Matt Cadena's work experience: Nextdoor, Ford, and CMU's Institute for Strategy & Technology."
+>
+  <h1>Work</h1>
+
+  <p class="page-intro">
+    Over the past few years, I've gained valuable experience in both industry
+    and academia. I recently completed an internship at Nextdoor on the
+    Notifications team. In 2024, I worked as a Software Engineer Intern at
+    Ford, and before that, I was a Research Assistant at Carnegie Mellon
+    University's Institute for Strategy & Technology.
+  </p>
+
+  {
+    rendered.map(({ entry, Content }) => (
+      <article class="work-entry">
+        <div class="work-year">{entry.data.year}</div>
+        <div class="work-body">
+          <h2>
+            {entry.data.title}{" "}
+            <span class="company">— {entry.data.company}</span>
+          </h2>
+          <Content />
+          <p class="work-tags">{entry.data.tags.join(" · ")}</p>
+        </div>
+      </article>
+    ))
+  }
+</Base>
