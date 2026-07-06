@@ -29,9 +29,9 @@ html {
 body {
   background: var(--bg);
   color: var(--ink);
-  font-family: "Newsreader Variable", Georgia, "Times New Roman", serif;
-  font-size: 1.1875rem;
-  line-height: 1.65;
+  font-family: "Geist Mono Variable", ui-monospace, "SF Mono", Menlo, monospace;
+  font-size: 0.9rem;
+  line-height: 1.7;
   max-width: 44rem;
   margin: 0 auto;
   padding: 1.75rem 1.5rem 3rem;
@@ -51,16 +51,16 @@ a:hover {
 }
 
 h1 {
-  font-size: 1.65rem;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1.25;
   margin-bottom: 1.5rem;
 }
 
 h2 {
-  font-size: 1.1875rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  line-height: 1.35;
+  line-height: 1.5;
 }
 
 img {
@@ -100,7 +100,6 @@ img {
 .masthead-nav a {
   color: var(--muted);
   text-decoration: none;
-  font-size: 1.0625rem;
 }
 
 .masthead-nav a:hover {
@@ -118,7 +117,7 @@ img {
   border-top: 1px solid var(--rule);
   margin-top: 4rem;
   padding-top: 1rem;
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   color: var(--muted);
 }
 
@@ -181,9 +180,8 @@ img {
 
 .work-tags {
   margin-top: 0.75rem;
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   color: var(--muted);
-  font-style: italic;
 }
 
 @media (max-width: 600px) {
@@ -192,7 +190,7 @@ img {
   }
 
   .work-year {
-    font-size: 0.9375rem;
+    font-size: 0.8125rem;
     margin-bottom: 0.25rem;
   }
 }
@@ -243,7 +241,7 @@ img {
 .project-year {
   margin-left: auto;
   color: var(--muted);
-  font-size: 0.9375rem;
+  font-size: 0.8125rem;
   font-variant-numeric: tabular-nums;
 }
 
