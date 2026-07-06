@@ -1,5 +1,6 @@
 ---
 title: Dynamic Memory Allocator
+year: "Fall '24"
 order: 6
 image: /images/malloc-lab.png
 imageAlt: Diagram of a segregated free-list memory allocator

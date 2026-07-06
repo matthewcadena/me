@@ -1,5 +1,6 @@
 ---
 title: RNN-LM with Self-Attention
+year: "Spring '25"
 order: 4
 image: /images/rnn-attention.png
 imageAlt: Diagram of an RNN with self-attention

@@ -1,6 +1,6 @@
 ---
 title: Projects at Nextdoor
-year: "2025"
+year: "Summer '25"
 order: 1
 image: /images/nextdoor-baseball.jpg
 imageAlt: At a baseball game with the Nextdoor team
